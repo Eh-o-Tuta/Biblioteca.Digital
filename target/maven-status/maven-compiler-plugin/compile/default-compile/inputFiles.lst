@@ -1,0 +1,4 @@
+/workspaces/Biblioteca.Digital/src/main/java/com/biblioteca/BibliotecaApplication.java
+/workspaces/Biblioteca.Digital/src/main/java/com/biblioteca/controller/LivroController.java
+/workspaces/Biblioteca.Digital/src/main/java/com/biblioteca/model/Livro.java
+/workspaces/Biblioteca.Digital/src/main/java/com/biblioteca/repository/LivroRepository.java
