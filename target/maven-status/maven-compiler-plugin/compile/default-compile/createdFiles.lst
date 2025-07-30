@@ -1,4 +1,7 @@
 com/biblioteca/model/Livro.class
-com/biblioteca/repository/LivroRepository.class
+com/biblioteca/exception/LivroNaoEncontradoException.class
 com/biblioteca/BibliotecaApplication.class
 com/biblioteca/controller/LivroController.class
+com/biblioteca/repository/LivroRepository.class
+com/biblioteca/controller/HomeController.class
+com/biblioteca/exception/GlobalExceptionHandler.class

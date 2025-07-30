@@ -9,19 +9,10 @@ import javax.persistence.Id;
 public class Livro {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Gerar o ID automaticamente
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titulo;
     private String autor;
-
-    // Construtores
-    public Livro() {}
-
-    public Livro(Long id, String titulo, String autor) {
-        this.id = id;
-        this.titulo = titulo;
-        this.autor = autor;
-    }
 
     // Getters e Setters
     public Long getId() {

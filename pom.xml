@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,54 +9,47 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Biblioteca Digital</name>
-    <description>Aplicação de biblioteca digital</description>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.9</version> <!-- Versão do Spring Boot -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <dependencies>
-        <!-- Dependências do Spring Boot -->
+        <!-- Spring Boot Starter Web (para a parte RESTful) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.7.5</version> <!-- Adapte para a versão que você está utilizando -->
         </dependency>
 
+        <!-- Spring Boot Starter Data JPA (para interagir com banco de dados) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.7.5</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>2.7.5</version>
-        </dependency>
-
+        <!-- H2 Database (banco de dados em memória) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.200</version>
+            <version>2.1.214</version> <!-- Versão do H2 Database -->
+            <scope>runtime</scope>
         </dependency>
 
+        <!-- Spring Boot Starter Test (para testes unitários e de integração) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>2.7.5</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- Dependência para resolver o erro JAXB -->
+        <!-- Spring Boot Starter Validation (para validação de dados) -->
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.1</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>2.3.3</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -63,9 +57,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.7.5</version> <!-- Adapte para a versão que você está utilizando -->
             </plugin>
         </plugins>
     </build>
-
 </project>
